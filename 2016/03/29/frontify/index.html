@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>frontify页面的实现 | 草 + 酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是我动手实现的第一个页面Frontify，前后花了一个星期的时间，目前还没有考虑响应式页面。以下是我实现过程中遇到的一些问题，及我的一些思考总结（^_^）
+position 定位
+static定位默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+fixed定位生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="frontify页面的实现">
+<meta property="og:url" content="http://yoursite.com/2016/03/29/frontify/index.html">
+<meta property="og:site_name" content="草 + 酱">
+<meta property="og:description" content="这是我动手实现的第一个页面Frontify，前后花了一个星期的时间，目前还没有考虑响应式页面。以下是我实现过程中遇到的一些问题，及我的一些思考总结（^_^）
+position 定位
+static定位默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+fixed定位生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置">
+<meta property="og:image" content="http://yoursite.com/images/frontify/2.png">
+<meta property="og:image" content="http://yoursite.com/images/frontify/1.png">
+<meta property="og:image" content="http://yoursite.com/images/frontify/4.png">
+<meta property="og:updated_time" content="2016-03-30T11:57:08.033Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="frontify页面的实现">
+<meta name="twitter:description" content="这是我动手实现的第一个页面Frontify，前后花了一个星期的时间，目前还没有考虑响应式页面。以下是我实现过程中遇到的一些问题，及我的一些思考总结（^_^）
+position 定位
+static定位默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+fixed定位生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置">
+<meta name="twitter:image" content="http://yoursite.com/images/frontify/2.png">
+  
+    <link rel="alternative" href="/atom.xml" title="草 + 酱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">言之命之</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/projects">项目</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">草 + 酱</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">草 + 酱</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">言之命之</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/projects">项目</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-frontify" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/29/frontify/" class="article-date">
+  	<time datetime="2016-03-29T12:08:34.000Z" itemprop="datePublished">2016-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      frontify页面的实现
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x8FD9;&#x662F;&#x6211;&#x52A8;&#x624B;&#x5B9E;&#x73B0;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9875;&#x9762;<a href="http://www.frontify.com" target="_blank" rel="external">Frontify</a>&#xFF0C;&#x524D;&#x540E;&#x82B1;&#x4E86;&#x4E00;&#x4E2A;&#x661F;&#x671F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x54CD;&#x5E94;&#x5F0F;&#x9875;&#x9762;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x53CA;&#x6211;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;&#x603B;&#x7ED3;&#xFF08;^_^&#xFF09;</p>
+<h2 id="position-&#x5B9A;&#x4F4D;"><a href="#position-&#x5B9A;&#x4F4D;" class="headerlink" title="position &#x5B9A;&#x4F4D;"></a>position &#x5B9A;&#x4F4D;</h2><ol>
+<li>static&#x5B9A;&#x4F4D;<br>&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x6CA1;&#x6709;&#x5B9A;&#x4F4D;&#xFF0C;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x5728;&#x6B63;&#x5E38;&#x7684;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#xFF08;&#x5FFD;&#x7565; top, bottom, left, right &#x6216;&#x8005; z-index &#x58F0;&#x660E;&#xFF09;&#x3002;</li>
+<li>fixed&#x5B9A;&#x4F4D;<br>&#x751F;&#x6210;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;<strong>&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;</strong>&#x8FDB;&#x884C;&#x5B9A;&#x4F4D;&#x3002;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x901A;&#x8FC7; &#x201C;left&#x201D;, &#x201C;top&#x201D;, &#x201C;right&#x201D; &#x4EE5;&#x53CA; &#x201C;bottom&#x201D; &#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x89C4;&#x5B9A;&#x3002;<br>&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;<code>header</code>&#x5C31;&#x662F;fixed&#x5B9A;&#x4F4D;&#x7684;.</li>
+<li>relative&#x5B9A;&#x4F4D;<a id="more"></a><br>&#x751F;&#x6210;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x6B63;&#x5E38;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x5B9A;&#x4F4D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;<code>left:20</code> &#x4F1A;&#x5411;&#x5143;&#x7D20;&#x7684; LEFT &#x4F4D;&#x7F6E;&#x6DFB;&#x52A0; 20 &#x50CF;&#x7D20;&#x3002;<br><img src="/images/frontify/2.png" alt="frontify-clip">&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#x8BBE;&#x5B9A;right&#xFF0C;left&#x4F7F;&#x5143;&#x7D20;&#x76F8;&#x5BF9;&#x4E0E;&#x5176;&#x6B63;&#x5E38;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x884C;&#x56FE;&#x6807;&#x7684;&#x5DE6;&#x53F3;&#x79FB;&#x52A8;&#x54D2;~<br>&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#x5BF9;&#x8C61;&#x4E0D;&#x53EF;&#x5C42;&#x53E0;&#xFF0C;&#x4F46;&#x5C06;&#x4F9D;&#x636E;<a href="http://www.w3school.com.cn/cssref/pr_pos_left.asp" target="_blank" rel="external">left</a>(&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x5DE6;&#x5916;&#x8FB9;&#x8DDD;&#x8FB9;&#x754C;&#x4E0E;&#x5176;&#x5305;&#x542B;&#x5757;&#x5DE6;&#x8FB9;&#x754C;&#x4E4B;&#x95F4;&#x7684;&#x504F;&#x79FB;)&#xFF0C;right&#xFF0C;top&#xFF0C;bottom&#x7B49;&#x5C5E;&#x6027;&#x5728;&#x6B63;&#x5E38;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x504F;&#x79FB;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x906E;&#x6321;&#x522B;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x81EA;&#x5DF1;&#x5728;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4F9D;&#x7136;&#x4FDD;&#x6301;&#x3002;</li>
+<li>absolute&#x5B9A;&#x4F4D;<br>&#x751F;&#x6210;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E; static &#x5B9A;&#x4F4D;&#x4EE5;&#x5916;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7236;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x5B9A;&#x4F4D;&#x3002;&#x5BF9;&#x8C61;&#x662F;&#x4ECE;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x8131;&#x79BB;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x5176;&#x5C42;&#x53E0;&#x901A;&#x8FC7;css z-index&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x3002;&#x6B64;&#x65F6;&#x5BF9;&#x8C61;&#x4E0D;&#x5177;&#x6709;&#x8FB9;&#x8DDD;&#xFF0C;&#x4F46;&#x4ECD;&#x6709;&#x8865;&#x767D;&#x548C;&#x8FB9;&#x6846;&#x3002;<br><em>&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x662F;&#x7236;&#x7EA7;&#x5B9A;&#x4E49;<code>position:relative</code>&#x5B9A;&#x4F4D;&#xFF0C;&#x5B50;&#x7EA7;&#x5B9A;&#x4E49;<code>position:absolute</code>&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5B50;&#x7EA7;&#x4F7F;&#x7528;left&#x6216;right&#x548C;top&#x6216;bottom&#x8FDB;&#x884C;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x3002;</em><br>&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x975E;static&#x5B9A;&#x4F4D;&#x7684;&#x7956;&#x5148;&#x5143;&#x7D20;&#x5B9A;&#x4F4D;&#x7684;~&#x800C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;position:absolute&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C;&#x5C06;&#x4F1A;&#x4EE5;<code>&lt;body&gt;&#x5143;&#x7D20;</code>&#x4E3A;&#x53C2;&#x8003;&#x8FDB;&#x884C;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x3002;</li>
+</ol>
+<p><strong>float&#x5E03;&#x5C40;&#x4E0E;absolute&#x5B9A;&#x4F4D;</strong></p>
+<p>float&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x5411;&#x54EA;&#x4E2A;&#x65B9;&#x5411;&#x6D6E;&#x52A8;&#xFF0C;&#x5728;css&#x4E2D;&#x4EFB;&#x4F55;&#x5143;&#x7D20;&#x90FD;&#x53EF;&#x4EE5;&#x6D6E;&#x52A8;&#xFF0C;&#x9ED8;&#x8BA4;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5757;&#x7EA7;&#x6846;&#x3002;&#x6D6E;&#x5728;&#x6587;&#x6863;&#x6D41;&#x8868;&#x9762;&#x5E76;&#x6CA1;&#x6709;&#x79BB;&#x5F00;&#x6587;&#x6863;&#x6D41;&#xFF08;&#x50CF;&#x662F;&#x6D6E;&#x840D;~&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x4EE5;&#x5F80;&#x7ECF;&#x5E38;&#x4F1A;&#x5E94;&#x7528;&#x4E0E;&#x56FE;&#x50CF;&#xFF0C;&#x4F7F;&#x6587;&#x672C;&#x56F4;&#x7ED5;&#x5728;&#x56FE;&#x50CF;&#x5468;&#x56F4;&#x3002;&#x800C;&#x4E14;&#x6D6E;&#x52A8;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x6E05;&#x9664;&#x7684;<code>clear&#xFF1A;both;</code>&#xFF1B;&#x5B9A;&#x4F4D;&#x662F;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#x7684;~&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x975E;&#x5E38;&#x597D;&#x7528;&#xFF0C;&#x4F46;&#x5207;&#x8BB0;&#x4E0D;&#x8981;&#x6EE5;&#x7528;&#xFF0C;&#x4EC0;&#x4E48;&#x5730;&#x65B9;&#x90FD;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x6709;&#x65F6;&#x4F1A;&#x61D2;&#x5F97;&#x8BA1;&#x7B97;&#x8DDD;&#x79BB;&#x4E0A;&#x3001;&#x4E0B;&#x3001;&#x5DE6;&#x3001;&#x53F3;&#x95F4;&#x8DDD;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;CSS&#x4EE3;&#x7801;&#x81C3;&#x80BF;&#x3002;</p>
+<h2 id="&#x76D2;&#x5B50;&#x6A21;&#x578B;"><a href="#&#x76D2;&#x5B50;&#x6A21;&#x578B;" class="headerlink" title="&#x76D2;&#x5B50;&#x6A21;&#x578B;"></a>&#x76D2;&#x5B50;&#x6A21;&#x578B;</h2><p><img src="/images/frontify/1.png" alt="&#x76D2;&#x5B50;&#x6A21;&#x578B;"><br><strong>margin&#x4E3A;&#x8D1F;&#x503C;</strong></p>
+<ol>
+<li><p>&#x4E0D;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;(<code>position:absolute;</code>)&#xFF0C;&#x4E5F;&#x4E0D;&#x4F7F;&#x7528;float&#x7684;&#x8BDD;&#xFF0C;&#x8D1F;margin&#x5143;&#x7D20;&#x662F;&#x4E0D;&#x4F1A;&#x7834;&#x574F;&#x9875;&#x9762;&#x7684;&#x6587;&#x6863;&#x6D41;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x8D1F;margin&#x4E0A;&#x79FB;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6240;&#x6709;&#x8DDF;&#x968F;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x4F1A;&#x88AB;&#x4E0A;&#x79FB;&#xFF0C;&#x4E0A;&#x548C;&#x5DE6;&#x4E00;&#x6837;&#x3002;&#x4E0B;&#x548C;&#x53F3;&#x8BBE;&#x7F6E;&#x8D1F;margin&#xFF0C;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x4F1A;&#x52A8;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5143;&#x7D20;&#x5411;&#x4E0A;&#x3001;&#x5411;&#x5DE6;&#x79FB;&#x52A8;,&#x5E76;&#x4F1A;&#x88AB;&#x6B64;&#x5143;&#x7D20;&#x8986;&#x76D6;.<img src="/images/frontify/4.png" alt="negative-margins"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn-bar</span> {</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> -<span class="number">15px</span>;<span class="comment">/*&#x4E3A;&#x4E86;&#x8BA9;&#x80CC;&#x666F;&#x8272;&#x586B;&#x5145;&#x6574;&#x4E2A;&#x6846;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x7236;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x4E86;padding&#xFF08;&#x5176;&#x5B9E;&#x8BBE;&#x7F6E;padding-left&#xFF1A;0&#x5C31;&#x597D;&#x4E86;~&#x7B97;&#x4E86;~&#x8FD9;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#xFF09;*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(255, 255, 255, .5);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>; <span class="comment">/*&#x6491;&#x5F00;&#x5BB9;&#x5668;*/</span></span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x4E0A;&#x7684;&#x8D1F;margin&#x3002;&#x3002;&#x3002;&#x3002;&#x3002;&#x3002;&#x8FD8;&#x6CA1;&#x7528;&#x5230;&#xFF0C;&#x4E0D;&#x4F1A;~&#x4EE5;&#x540E;&#x5728;&#x8865;&#x5145;&#x597D;&#x4E86;~(&#x2044; &#x2044;&#x2022;&#x2044;&#x3C9;&#x2044;&#x2022;&#x2044; &#x2044;)</p>
+</li>
+</ol>
+<h2 id="&#x4F2A;&#x5143;&#x7D20;&#x548C;&#x4F2A;&#x7C7B;"><a href="#&#x4F2A;&#x5143;&#x7D20;&#x548C;&#x4F2A;&#x7C7B;" class="headerlink" title="&#x4F2A;&#x5143;&#x7D20;&#x548C;&#x4F2A;&#x7C7B;"></a>&#x4F2A;&#x5143;&#x7D20;&#x548C;&#x4F2A;&#x7C7B;</h2><ol>
+<li>&#x6B64;&#x9875;&#x9762;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4F2A;&#x5143;&#x7D20;&#x6709;::before,::after&#x4E24;&#x79CD;&#x3002;<br>&#x7528;&#x4E8E;&#x5728;&#x5185;&#x5BB9;&#x5143;&#x7D20;&#x7684;&#x524D;&#x540E;&#x63D2;&#x5165;&#x989D;&#x5916;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x751F;&#x6210;&#xFF0C;&#x5B83;&#x4EEC;&#x5C06;&#x5728;&#x5916;&#x90E8;&#x53EF;&#x89C1;&#xFF0C;&#x4F46;&#x4F60;&#x4E0D;&#x4F1A;&#x5728;&#x6587;&#x6863;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#xFF08;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#xFF09;&#x4E2D;&#x627E;&#x5230;&#x5B83;&#x4EEC;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x865A;&#x5047;&#x7684;&#x5143;&#x7D20;&#x3002;<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x6309;&#x94AE;&#x90FD;&#x662F;&#x91C7;&#x7528;&#x6DFB;&#x52A0;&#x4F2A;&#x5143;&#x7D20;&#x6765;&#x5B9E;&#x73B0;hover&#x65F6;&#x7684;&#x6548;&#x679C;&#x7684;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-signup btn-orange&quot;</span> <span class="attr">href</span>=<span class="string">&quot;javascript:;&quot;</span>&gt;</span></span><br><span class="line">	SIGN UP</span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- href=&quot;javascript:;&quot;&#x662F;&#x4E00;&#x4E2A;&#x4F2A;&#x534F;&#x8BAE;&#x3002;javascript:&#x662F;&#x8868;&#x793A;&#x5728;&#x51FA;&#x53D1;&lt;a&gt;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x65F6;&#x6267;&#x884C;&#x7684;&#x4E00;&#x6BB5;JavaScript&#x4EE3;&#x7801;&#x3002;</span><br><span class="line">	&#x800C;javascript:;&#x8868;&#x793A;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x70B9;&#x51FB;&lt;a&gt;&#x65F6;&#x5C31;&#x6CA1;&#x6709;&#x53CD;&#x5E94;&#x3002;&#x8DDF;href=&quot;javascript:void(0)&quot;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</span><br><span class="line">	&#x7C7B;&#x4F3C;&#x7684;&#x6709;href=&quot;#&quot;,&#x70B9;&#x51FB;&#x4E4B;&#x540E;&#xFF0C;&#x4E5F;&#x9ED8;&#x8BA4;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x9875;&#x9762;&#x5F88;&#x957F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x70B9;&#x51FB;&#x4E4B;&#x540E;&#x9875;&#x9762;&#x4F1A;&#x56DE;&#x6EDA;&#x5230;&#x9876;&#x90E8;&#xFF0C;</span><br><span class="line">	javascript:;&#x5219;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x95EE;&#x9898;&#x3002;</span><br><span class="line">	--&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>&#x4E00;&#x822C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x7ED9;<a>&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x6765;&#x6267;&#x884C;&#x4E1A;&#x52A1;&#xFF0C;&#x5982;:<code>$(&apos;selector&apos;).click(function(){...});</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn-signup</span> {</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">13px</span> <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-signup</span><span class="selector-pseudo">:before</span> {</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&apos;&apos;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border</span>: white solid <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-duration</span>: <span class="number">0.3s</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">0.3s</span>;</span><br><span class="line">    <span class="attribute">-webkit-transition-property</span>: opacity;</span><br><span class="line">    <span class="attribute">transition-property</span>: opacity;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-signup</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.btn-signup</span><span class="selector-pseudo">:focus</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.btn-signup</span><span class="selector-pseudo">:active</span><span class="selector-pseudo">:before</span> {</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.4</span>; <span class="comment">/*&#x4E0D;&#x900F;&#x660E;&#x7EA7;&#x522B;*/</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/30/frontify/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/20/blog1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"> 유재석</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="frontify" data-title="frontify页面的实现" data-url="http://yoursite.com/2016/03/29/frontify/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"aqua0706"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 草 + 酱
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
