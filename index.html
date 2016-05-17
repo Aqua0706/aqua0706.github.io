@@ -115,6 +115,60 @@
 </nav>
       
   
+    <article id="post-You-Don-t-Know-JS-Async-Performance" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance/" class="article-date">
+  	<time datetime="2016-05-17T07:51:04.000Z" itemprop="datePublished">05-17</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/You-Don-t-Know-JS-Async-Performance/">You Don&#39;t Know JS:Async &amp; Performance 读书笔记</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Chapter-1-Asynchrony-Now-amp-Later"><a href="#Chapter-1-Asynchrony-Now-amp-Later" class="headerlink" title="Chapter 1:Asynchrony: Now &amp; Later"></a>Chapter 1:Asynchrony: Now &amp; Later</h2><ol>
+<li><p>什么是异步？</p>
+<blockquote>
+<p> Any time you wrap a portion of code into a function and specify that it should be executed in response to some event<br>(timer, mouse click, Ajax response, etc.), you are creating a later chunk of your code, and thus introducing asynchrony to<br>your program.</p>
+</blockquote>
+<p>将程序分块chunk,只有一个chunk现在执行，其他的chunk稍后执行（chunk通常由function组成）。若使用定时器、ajax请求（默认异步）、鼠标单击监听事件、等待用户输入等，从而指定一部分的代码稍后执行，也就是在程序中引入了异步。</p>
+<ul>
+<li>例如我们发送网络请求等待响应，它也可以发送一个同步的ajax请求（最好不要），这时就必须要等到响应回来之后，才可以继续执行剩下的代码。而异步的ajax，他发送请求之后，并不会等待请求回来，而只是注册一下这个事件，就继续执行剩下的代码，将这个事件挂起，通知hosting environment去监听，等待网络请求回来之后，触发这个事件，再把回掉函数放到事件循环队列中。
+        
+          <p class="article-more-link">
+            <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-single-div" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
