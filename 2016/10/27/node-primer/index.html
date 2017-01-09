@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>node primer | 草 + 酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="什么是Node？ JS本身是一种完整的语言，可以在不同的上下文中执行，浏览器提供了一个上下文，nodejs事实上也是，它使用Google的V8虚拟机，来解释和执行js，使得js可以脱离浏览器环境在后端运行js代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node primer">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/node-primer/index.html">
+<meta property="og:site_name" content="草 + 酱">
+<meta property="og:description" content="什么是Node？ JS本身是一种完整的语言，可以在不同的上下文中执行，浏览器提供了一个上下文，nodejs事实上也是，它使用Google的V8虚拟机，来解释和执行js，使得js可以脱离浏览器环境在后端运行js代码。">
+<meta property="og:updated_time" content="2017-01-09T12:53:51.267Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node primer">
+<meta name="twitter:description" content="什么是Node？ JS本身是一种完整的语言，可以在不同的上下文中执行，浏览器提供了一个上下文，nodejs事实上也是，它使用Google的V8虚拟机，来解释和执行js，使得js可以脱离浏览器环境在后端运行js代码。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="/avatar.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/projects">项目</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+			</div>
+		</div>
+	</header>		
+</span>		
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/avatar.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/projects">项目</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-node-primer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/27/node-primer/" class="article-date">
+  	<time datetime="2016-10-27T07:49:46.000Z" itemprop="datePublished">10-27</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      node primer
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="toc-container">
+          <strong class="toc-title">文章目录</strong>
+          
+        </div>      
+      
+        <ol>
+<li><p>&#x4EC0;&#x4E48;&#x662F;Node&#xFF1F;<br> JS&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x79CD;&#x5B8C;&#x6574;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;nodejs&#x4E8B;&#x5B9E;&#x4E0A;&#x4E5F;&#x662F;&#xFF0C;&#x5B83;&#x4F7F;&#x7528;Google&#x7684;V8&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x6765;&#x89E3;&#x91CA;&#x548C;&#x6267;&#x884C;js&#xFF0C;&#x4F7F;&#x5F97;js&#x53EF;&#x4EE5;&#x8131;&#x79BB;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x5728;&#x540E;&#x7AEF;&#x8FD0;&#x884C;js&#x4EE3;&#x7801;&#x3002;</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&quot;http&quot;</span>);</span><br><span class="line">http.creactServer(<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>{</span><br><span class="line">    response.writeHead(<span class="number">200</span>,{<span class="string">&quot;Content-Type&quot;</span>:<span class="string">&quot;text/plain&quot;</span>});</span><br><span class="line">    response.writeHead(<span class="number">200</span>,{<span class="string">&quot;hello world!&quot;</span>);</span><br><span class="line">    response.end();</span><br><span class="line"></span><br><span class="line">}).listen(<span class="number">8888</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#x56DE;&#x8C03;<br> NodeJS&#x4E00;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x8457;&#x540D;&#xFF0C;&#x901A;&#x8FC7;&#x5F02;&#x6B65;&#x7684;&#x7F16;&#x7A0B;&#x8FBE;&#x5230;&#x9AD8;&#x541E;&#x5410;&#x91CF;&#xFF0C;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x6548;&#x679C;&#x3002;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x7684;&#x76F4;&#x63A5;&#x4F53;&#x73B0;&#x5C31;&#x662F;&#x56DE;&#x8C03;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x8BF4;&#x56DE;&#x8C03;&#x540E;&#x7A0B;&#x5E8F;&#x5C31;&#x5F02;&#x6B65;&#x5316;&#x4E86;&#x3002;<br> &#x8BF7;&#x6C42;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x90FD;&#x53EF;&#x80FD;&#x5230;&#x8FBE;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x670D;&#x52A1;&#x5668;&#x5374;&#x8DD1;&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x8FDB;&#x7A0B;&#x3002;<br> &#x56DE;&#x8C03;&#xFF1A;&#x6211;&#x4EEC;&#x7ED9;&#x67D0;&#x4E2A;&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x76F8;&#x5E94;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x65F6;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#x3002;<br> &#xFF08;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x4E2A;&#x76D1;&#x542C;8888&#x7AEF;&#x53E3;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5F53;&#x6709;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x5C31;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#xFF09;</p>
+</li>
+<li><p>&#x5C06;&#x5904;&#x7406;&#x90E8;&#x5206;&#x5199;&#x5728;http.createServer&#x4E2D;&#xFF0C;&#x6309;&#x7167;&#x4F20;&#x7EDF;&#x601D;&#x8DEF;&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x540E;&#xFF0C;&#x9047;&#x5230;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4F1A;&#x53BB;&#x8FD0;&#x884C;&#x3002;&#x5982;&#x679C;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x5F88;&#x957F;&#xFF0C;&#x5BFC;&#x81F4;&#x6682;&#x505C;&#xFF0C;&#x975E;&#x5E38;&#x6CA1;&#x6709;&#x6548;&#x7387;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E8C;&#x4F4D;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B83;&#x4ECD;&#x5728;&#x670D;&#x52A1;&#x7B2C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x90A3;&#x7B2C;&#x4E8C;&#x4E2A;&#x8BF7;&#x6C42;&#x53EA;&#x80FD;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x518D;&#x5E94;&#x7B54;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x963B;&#x585E;&#x5F0F;&#x7684;SocketIO&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>&#x4E8B;&#x4EF6;&#x8F6E;&#x8BE2;&#x673A;&#x5236;<br> NodeJS&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x662F;&#x9760;&#x4E00;&#x4E2A;&#x5355;&#x7EBF;&#x7A0B;&#x4E0D;&#x65AD;&#x67E5;&#x8BE2;&#x961F;&#x5217;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x4E8B;&#x4EF6;&#xFF0C;&#x5F53;&#x4ED6;&#x8BFB;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x5C06;&#x8C03;&#x7528;&#x4E0E;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5173;&#x8054;&#x7684;javaScript&#x51FD;&#x6570;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x6267;&#x884C;&#x4E00;&#x4E2A;IO&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x4FA6;&#x542C;&#x4E00;&#x4E0B;8888&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x6709;socket&#x94FE;&#x63A5;&#xFF0C;NodeJS&#x4F1A;&#x542F;&#x52A8;&#x8FD9;&#x4E2A;IO&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x7B49;&#x5F85;IO&#x64CD;&#x4F5C;&#x7ED3;&#x675F;&#xFF0C;&#x800C;&#x662F;&#x7EE7;&#x7EED;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x4E0B;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x5C31;&#x5904;&#x7406;&#x3002;  </p>
+</li>
+</ol>
+<p>&#x8DEF;&#x7531;&#xFF1A;&#x901A;&#x8FC7;url&#x8DEF;&#x5F84;&#x6765;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4EE5;url&#x8DEF;&#x5F84;&#x4E3A;&#x57FA;&#x51C6;&#x6620;&#x5C04;&#x5230;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E0A;&#x3002;&#x662F;&#x6307;&#x6211;&#x4EEC;&#x8981;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;URL&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x4E0A;&#x63A5;&#x6536;&#x5230;&#x6570;&#x636E;&#x5305;&#xFF0C;&#x6839;&#x636E;&#x6570;&#x636E;&#x5305;&#x7684;&#x76EE;&#x7684;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x5B9A;&#x5411;&#xFF0C;&#x5E76;&#x8F6C;&#x53D1;&#x5230;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x8FC7;&#x7A0B;&#x3002;<br>&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#xFF1A;</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/01/09/Session-Cookie/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Session &amp; Cookie
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/26/regular-expression/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">regular expression 正则表达式</div>
+        <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="node-primer" data-title="node primer" data-url="http://yoursite.com/2016/10/27/node-primer/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"aqua0706"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 草 + 酱
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, modified by <a href="http://natumsol.github.com">Yoghurt</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/js/main.js"></script>
+
+  </div>
+</body>
+</html>
