@@ -5,17 +5,20 @@
   
   <title>Client_Storage | 草 + 酱</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x7684;&amp;#x5F02;&amp;#x540C;&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x6709;&amp;#xFF1A;cookie&amp;#x3001;sessionStorage&amp;#x3001;localStorage">
+  <meta name="description" content="客户端存储方式的异同客户端存储方式有：cookie、sessionStorage、localStorage、Web Storag等。
+共同点： 都是保存在浏览器端，且有同源限制。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Client_Storage">
 <meta property="og:url" content="http://yoursite.com/2017/01/09/Client-Storage/index.html">
 <meta property="og:site_name" content="草 + 酱">
-<meta property="og:description" content="&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x7684;&amp;#x5F02;&amp;#x540C;&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x6709;&amp;#xFF1A;cookie&amp;#x3001;sessionStorage&amp;#x3001;localStorage">
+<meta property="og:description" content="客户端存储方式的异同客户端存储方式有：cookie、sessionStorage、localStorage、Web Storag等。
+共同点： 都是保存在浏览器端，且有同源限制。">
 <meta property="og:image" content="http://yoursite.com/./images/localStorage_event对象属性.png">
-<meta property="og:updated_time" content="2017-01-19T09:36:11.577Z">
+<meta property="og:updated_time" content="2017-02-14T02:34:11.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Client_Storage">
-<meta name="twitter:description" content="&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x7684;&amp;#x5F02;&amp;#x540C;&amp;#x5BA2;&amp;#x6237;&amp;#x7AEF;&amp;#x5B58;&amp;#x50A8;&amp;#x65B9;&amp;#x5F0F;&amp;#x6709;&amp;#xFF1A;cookie&amp;#x3001;sessionStorage&amp;#x3001;localStorage">
+<meta name="twitter:description" content="客户端存储方式的异同客户端存储方式有：cookie、sessionStorage、localStorage、Web Storag等。
+共同点： 都是保存在浏览器端，且有同源限制。">
 <meta name="twitter:image" content="http://yoursite.com/./images/localStorage_event对象属性.png">
   
   
@@ -151,8 +154,7 @@
         </div>      
       
         <h3 id="&#x5BA2;&#x6237;&#x7AEF;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x7684;&#x5F02;&#x540C;"><a href="#&#x5BA2;&#x6237;&#x7AEF;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x7684;&#x5F02;&#x540C;" class="headerlink" title="&#x5BA2;&#x6237;&#x7AEF;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x7684;&#x5F02;&#x540C;"></a>&#x5BA2;&#x6237;&#x7AEF;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x7684;&#x5F02;&#x540C;</h3><p>&#x5BA2;&#x6237;&#x7AEF;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x6709;&#xFF1A;cookie&#x3001;sessionStorage&#x3001;localStorage&#x3001;Web Storag&#x7B49;&#x3002;</p>
-<p><strong>&#x5171;&#x540C;&#x70B9;&#xFF1A;</strong> &#x90FD;&#x662F;&#x4FDD;&#x5B58;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#xFF0C;&#x4E14;&#x6709;&#x540C;&#x6E90;&#x9650;&#x5236;&#x3002;</p>
-<p><strong>&#x533A;&#x522B;&#xFF1A;</strong></p>
+<p><strong>&#x5171;&#x540C;&#x70B9;&#xFF1A;</strong> &#x90FD;&#x662F;&#x4FDD;&#x5B58;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#xFF0C;&#x4E14;&#x6709;&#x540C;&#x6E90;&#x9650;&#x5236;&#x3002;<br><a id="more"></a><br><strong>&#x533A;&#x522B;&#xFF1A;</strong></p>
 <ol>
 <li>cookie&#x6570;&#x636E;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x548C;&#x670D;&#x52A1;&#x5668;&#x95F4;&#x6765;&#x56DE;&#x4F20;&#x9012;,&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x3002;&#x800C;sessionStorage&#x548C;localStorage&#x7528;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x6570;&#x636E;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5728;&#x672C;&#x5730;&#x4FDD;&#x5B58;&#x3002;</li>
 <li>&#x7531;&#x4E8E;Cookie&#x662F;&#x4F5C;&#x4E3A;HTTP&#x89C4;&#x8303;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;&#x643A;&#x5E26;&#x90FD;&#x4F1A;&#x5728;HTTP&#x5934;&#x4E2D;&#xFF0C;&#x5982;&#x679C;Cookie&#x4FDD;&#x5B58;&#x8FC7;&#x591A;&#x6570;&#x636E;&#x4F1A;&#x5E26;&#x6765;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x800C;WebStorage&#x4EC5;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4FDD;&#x5B58;&#xFF0C;&#x4E0D;&#x53C2;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x901A;&#x4FE1;&#x3002;&#x4E00;&#x822C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;cookie,&#x4F46;&#x662F;&#x4F1A;&#x9891;&#x7E41;&#x64CD;&#x4F5C;cookie.</li>
@@ -200,6 +202,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/02/02/CORS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          CORS
+        
+      </div>
+    </a>
   
   
     <a href="/2017/01/09/Session-Cookie/" id="article-nav-older" class="article-nav-link-wrap">

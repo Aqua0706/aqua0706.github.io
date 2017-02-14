@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>草 + 酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="草 + 酱">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="草 + 酱">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="草 + 酱">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="/avatar.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/projects">项目</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+			</div>
+		</div>
+	</header>		
+</span>		
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/avatar.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/projects">项目</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      
+  
+    <article id="post-Session-Cookie" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/09/Session-Cookie/" class="article-date">
+  	<time datetime="2017-01-09T12:31:11.000Z" itemprop="datePublished">01-09</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/09/Session-Cookie/">Session &amp; Cookie</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h2><p>  进行某活动连续的一段时间内，需要保持服务器与客户端之间会话的状态(登陆了，刷新之后登陆状态依然要保持)。得在服务器与用户之间有一个一一对应的关系。<br>  一个用户的所有请求都应该属于同一会话，会话与会话间相互独立。网站服务一般使用http协议传输数据(无状态协议)，一旦数据交换完成，客户端与服务器端的连接就会关闭，再次交换需要再次创建新连接。也就是说，服务器无法从链接上跟踪会话，所以要引入一种机制，来弥补http协议无状态的不足。</p>
+<p>  一般通过<code>Cookie</code>和<code>Session</code>来实现。
+        
+          <p class="article-more-link">
+            <a href="/2017/01/09/Session-Cookie/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-node-primer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/27/node-primer/" class="article-date">
+  	<time datetime="2016-10-27T07:49:46.000Z" itemprop="datePublished">10-27</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/node-primer/">node primer</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>什么是NodeJS？<br> JS本身是一种完整的语言，可以在不同的上下文中执行，浏览器提供了一个上下文，nodejs事实上也是，它使用Google的V8虚拟机，来解释和执行js，使得js可以脱离浏览器环境在后端运行js代码。<ul>
+<li>NodeJS是一个JS脚本解析器，任何操作系统下安装NodeJS本质上做的事情都是把NodeJS执行程序复制到一个目录，然后保证在这个目录在系统PATH环境变量下，以便终端下可以使用node命令。 </li>
+<li>终端下直接输入node命令可以进入命令交互模式，很适合用来测试一些JS代码片段，比如政策表达式。</li>
+<li>NodeJS使用CMD模范。主模块作为程序入口点，所有模块在执行过程中只初始化一次，无论require几次。
+        
+          <p class="article-more-link">
+            <a href="/2016/10/27/node-primer/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/26/regular-expression/" class="article-date">
+  	<time datetime="2016-10-26T08:28:56.000Z" itemprop="datePublished">10-26</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/regular-expression/">regular expression 正则表达式</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>总是遇见正则表达式，也没有仔细看过，今天看了几篇blog，简单做个笔记。<br>正则表达式：用于匹配满足某些规则的文本的代码。</p>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><strong>常用元字符</strong></p>
+<ul>
+<li>&nbsp;<strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配除换行符以外的任意字符。</li>
+<li>&nbsp;<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指定`</em>`前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</li>
+<li>\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配字母或者数字或者下划线或汉字。</li>
+<li>\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配任意的空白符，包括空格，制表符(Tab),换行符，中文全角空格。</li>
+<li>\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配一位数字0-9。</li>
+<li>\b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配单词的开头或者结尾，即单词的分界处，并不是匹配具体的一个什么分割字符，就是匹配这么个位置。</li>
+<li>&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的开始。</li>
+<li>&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的结束。</li>
+</ul>
+<p><em>如果你想查找元字符本身的话，需要使用转义字符\来取消这些字符的特殊意义。<code>\.</code>匹配<code>.</code>，<code>\\</code>匹配<code>\</code>。</em><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/10/26/regular-expression/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-Hacking-With-React-读书笔记之React入门" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/17/Hacking-With-React-读书笔记之React入门/" class="article-date">
+  	<time datetime="2016-09-17T02:15:59.000Z" itemprop="datePublished">09-17</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/Hacking-With-React-读书笔记之React入门/">Hacking With React读书笔记之React入门</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>好久没有写博客了，暑假以来，项目啊、小论文啊，种种使得没能坚持下来。。惭愧思密达~最近看了本书<code>Hacking with React</code>，介绍了React前端框架入门、React-Router路由库、<code>Jest</code>JS单元测试工具、Webpack前端模块加载工具、ES6、Babel、SuperAgent、Chance、ESLint等相关技术，来构建模块化JavaScript应用。对我来说，简直打开新世界的大门~因为都不会。。悲伤脸~<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/09/17/Hacking-With-React-读书笔记之React入门/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-You-Don-t-Know-JS-Async-Performance2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/" class="article-date">
+  	<time datetime="2016-06-06T13:04:51.000Z" itemprop="datePublished">06-06</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/">You Don&#39;t Know JS读书笔记之Promise</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>回调函数的问题在于他剥夺了我们使用return和throw，这类关键字的能力，把程序执行的控制权交给回调函数，从而带来反转控制（inversion of control）。而Promise很好的解决了这一问题。如下面这个例子，并不是直接给foo()传递一个回调函数，而是return一个接收回调函数的事件-promise。<br>promise承诺我们一定可以在未来的某个时刻得到某个异步事件的结果，fulfillment或者reject，所以我们可以对结果安排一些之后要执行的操作，而不必担心这个异步事件什么时候执行完毕（time-independent）。这里p获得了这个promise执行的结果，我们可以通过then方法来决定reslove之后执行什么，来处理这些future value。<br>inversion of inversion从而解决反转控制。<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-You-Don-t-Know-JS-Async-Performance1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/" class="article-date">
+  	<time datetime="2016-05-17T07:51:04.000Z" itemprop="datePublished">05-17</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/">You Don&#39;t Know JS读书笔记之Async</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Chapter-1-Asynchrony-Now-amp-Later"><a href="#Chapter-1-Asynchrony-Now-amp-Later" class="headerlink" title="Chapter 1:Asynchrony: Now &amp; Later"></a>Chapter 1:Asynchrony: Now &amp; Later</h2><h3 id="什么是异步？"><a href="#什么是异步？" class="headerlink" title="什么是异步？"></a>什么是异步？</h3><hr>
+<blockquote>
+<p> Any time you wrap a portion of code into a function and specify that it should be executed in response to some event<br>  (timer, mouse click, Ajax response, etc.), you are creating a later chunk of your code, and thus introducing asynchrony to<br>  your program.</p>
+</blockquote>
+<p>  将程序分块chunk,只有一个chunk现在执行，其他的chunk稍后执行（chunk通常由function组成）。若使用定时器、ajax请求（默认异步）、鼠标单击监听事件、等待用户输入等，从而指定一部分的代码稍后执行，也就是在程序中引入了异步。</p>
+<ul>
+<li>例如我们发送网络请求等待响应，它也可以发送一个同步的ajax请求（最好不要），这时就必须要等到响应回来之后，才可以继续执行剩下的代码。而异步的ajax，他发送请求之后，并不会等待请求回来，而只是注册一下这个事件，就继续执行剩下的代码，将这个事件挂起，通知hosting environment去监听，等待网络请求回来之后，触发这个事件，再把回掉函数放到事件循环队列中。
+        
+          <p class="article-more-link">
+            <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-single-div" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/08/single-div/" class="article-date">
+  	<time datetime="2016-04-08T06:41:18.000Z" itemprop="datePublished">04-08</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/08/single-div/">用一个div+css实现复杂图形</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>清明回来，学长让我看了个网站<a href="http://a.singlediv.com/">Single Div</a>，里面的图片都是只用了一个div实现的，484好神奇~而且基本都是使用<code>background-image</code>和<code>box-shadow</code>这两个属性来实现。在看了一堆资料和动手实现了其中两个之后，来总结一下~</p>
+<h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><p><code>background-image</code>属性为元素设置背景图像。<br>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。可以根据<code>background-repeat</code>属性来指定图像无限平铺、沿着某个轴（x 轴或 y 轴）平铺，或者根本不平铺，也可以根据<code>background-position</code>属性指定初始背景图像（原图像）放置的位置。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/04/08/single-div/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-frontify" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/29/frontify/" class="article-date">
+  	<time datetime="2016-03-29T12:08:34.000Z" itemprop="datePublished">03-29</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目/">项目</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/29/frontify/">frontify页面的实现</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是我动手实现的第一个页面<a href="http://www.frontify.com">Frontify</a>，前后花了一个星期的时间，目前还没有考虑响应式页面。以下是我实现过程中遇到的一些问题，及我的一些思考总结。</p>
+<h2 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS <code>position</code> 属性</h2><ol>
+<li><p>static定位</p>
+<p> 默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+</li>
+<li><p>fixed定位</p>
+<p> 生成绝对定位的元素，相对于<strong>浏览器窗口</strong>进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br> 整个页面的<code>header</code>就是fixed定位的.</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/29/frontify/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="&#39;new-blog1" class="article article-type-&#39;new" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/20/blog1/" class="article-date">
+  	<time datetime="2016-03-20T09:07:04.000Z" itemprop="datePublished">03-20</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/20/blog1/"> 유재석</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h2><p>boom 哈哈哈</p>
+<p><img src="/images/1.jpg" alt="刘在石" ></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"Hello World!!"</span>);</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/20/blog1/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-CSS-定位" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/06/CSS-定位/" class="article-date">
+  	<time datetime="2016-02-06T13:38:46.000Z" itemprop="datePublished">02-06</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/06/CSS-定位/">CSS 定位</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将窗体自上而下分成一行行，并在每一行中从左到右的顺序排放元素，即为文档流。有三种情况将使得元素脱离文档流，分别是浮动(float left or right)、绝对定位(position:absolute)、固定定位(position:fixed)。CSS定位，就是元素的position不为static。而该元素将成为其亲子元素的offsetParent，也有机会成为其孙元素的offsetParent。<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/02/06/CSS-定位/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 草 + 酱
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, modified by <a href="http://natumsol.github.com">Yoghurt</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/js/main.js"></script>
+
+  </div>
+</body>
+</html>

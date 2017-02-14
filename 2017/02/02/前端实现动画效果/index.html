@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端实现动画效果 | 草 + 酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="css3的transition抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 
+语法：transition: property duration timing-fun">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端实现动画效果">
+<meta property="og:url" content="http://yoursite.com/2017/02/02/前端实现动画效果/index.html">
+<meta property="og:site_name" content="草 + 酱">
+<meta property="og:description" content="css3的transition抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 
+语法：transition: property duration timing-fun">
+<meta property="og:updated_time" content="2017-02-14T02:34:11.038Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端实现动画效果">
+<meta name="twitter:description" content="css3的transition抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 
+语法：transition: property duration timing-fun">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="/avatar.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/projects">项目</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+			</div>
+		</div>
+	</header>		
+</span>		
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/avatar.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/projects">项目</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-前端实现动画效果" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/02/前端实现动画效果/" class="article-date">
+  	<time datetime="2017-02-02T08:03:22.000Z" itemprop="datePublished">02-02</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端实现动画效果
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div class="toc-container">
+          <strong class="toc-title">文章目录</strong>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#css3的transition"><span class="toc-number">1.</span> <span class="toc-text">css3的transition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css3的animation属性"><span class="toc-number">2.</span> <span class="toc-text">css3的animation属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jquery的animate函数"><span class="toc-number">3.</span> <span class="toc-text">Jquery的animate函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原生js动画"><span class="toc-number">4.</span> <span class="toc-text">原生js动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件"><span class="toc-number">5.</span> <span class="toc-text">插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用canvas制作动画"><span class="toc-number">6.</span> <span class="toc-text">使用canvas制作动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用gif图片"><span class="toc-number">7.</span> <span class="toc-text">引用gif图片</span></a></li></ol>
+        </div>      
+      
+        <h3 id="css3&#x7684;transition"><a href="#css3&#x7684;transition" class="headerlink" title="css3&#x7684;transition"></a>css3&#x7684;transition</h3><p>&#x6293;&#x4F4F;&#x4E86;&#x6240;&#x8BBE;&#x7F6E;&#x53D8;&#x5316;&#x5C5E;&#x6027;&#x7684;&#x8D77;&#x59CB;&#x6001;&#x548C;&#x5B8C;&#x6210;&#x6001;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x5B9A;&#x7684;&#x901F;&#x5EA6;&#x66F2;&#x7EBF;&#x6765;&#x5B8C;&#x6210;&#x52A8;&#x753B;&#x3002;&#x53EF;&#x4EE5;&#x6D89;&#x53CA;&#x5230;&#x5404;&#x79CD;&#x53D8;&#x5316;&#x7684;css&#x5C5E;&#x6027;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;all&#xFF0C;&#x5219;&#x6240;&#x6709;&#x53D8;&#x5316;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4F1A;&#x5728;&#x51FA;&#x53D1;&#x65F6;&#xFF0C;&#x4EE5;&#x52A8;&#x753B;&#x7684;&#x5F62;&#x5F0F;&#x5C55;&#x73B0;&#x51FA;&#x6765;&#x3002;&#x8FD9;&#x79CD;&#x52A8;&#x753B;&#x65B9;&#x5F0F;&#x662F;css3&#x7684;&#xFF0C;&#x56E0;&#x6B64;ie9&#x4EE5;&#x4E0B;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x9700;&#x8981;&#x52A0;&#x524D;&#x7F00;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6709;&#x4E24;&#x6001;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x3002; </p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;<code>transition: property duration timing-function delay;</code> </p>
+<p><code>property</code>:&#x586B;&#x5199;&#x9700;&#x8981;&#x53D8;&#x5316;&#x7684;css&#x5C5E;&#x6027;&#x5982;&#xFF1A;width,line-height,font-size,color&#x7B49;;<br><code>duration</code>:&#x5B8C;&#x6210;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#xFF08;2s &#x6216;&#x8005;2000ms&#xFF09;<br><code>timing-function</code>:&#x5B8C;&#x6210;&#x6548;&#x679C;&#x7684;&#x901F;&#x5EA6;&#x66F2;&#x7EBF;&#xFF08;linear&#x5300;&#x901F;,ease&#x4ECE;&#x6162;&#x5230;&#x5FEB;&#x518D;&#x5230;&#x6162;,ease-in&#x6162;&#x6162;&#x53D8;&#x5FEB;,ease-out&#x6162;&#x6162;&#x53D8;&#x6162;&#x7B49;&#x7B49;&#xFF09;<br><code>timing-delay</code>:&#x52A8;&#x753B;&#x6548;&#x679C;&#x7684;&#x5EF6;&#x8FDF;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF08;2s &#x6216;&#x8005;2000ms&#xFF09;&#x3002;<br><em>tips: transform&#x662F;&#x4E00;&#x79CD;&#x53D8;&#x5316;&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5BF9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x65CB;&#x8F6C;&#x3001;&#x7F29;&#x653E;&#x3001;&#x79FB;&#x52A8;&#x6216;&#x503E;&#x659C;&#x3002;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;transition&#x4E2D;&#x9700;&#x8981;&#x53D8;&#x5316;&#x7684;&#x5C5E;&#x6027;&#x3002;</em><br><a id="more"></a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transition</span><span class="selector-pseudo">:width</span> 2<span class="selector-tag">s</span>;</span><br><span class="line"><span class="selector-tag">-moz-transition</span><span class="selector-pseudo">:width</span> 2<span class="selector-tag">s</span>; <span class="comment">/* Firefox 4 */</span></span><br><span class="line"><span class="selector-tag">-webkit-transition</span><span class="selector-pseudo">:width</span> 2<span class="selector-tag">s</span>; <span class="comment">/* Safari and Chrome */</span></span><br><span class="line"><span class="selector-tag">-o-transition</span><span class="selector-pseudo">:width</span> 2<span class="selector-tag">s</span>; <span class="comment">/* Opera */</span></span><br><span class="line"><span class="selector-tag">transform</span><span class="selector-pseudo">:rotate(9deg)</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="css3&#x7684;animation&#x5C5E;&#x6027;"><a href="#css3&#x7684;animation&#x5C5E;&#x6027;" class="headerlink" title="css3&#x7684;animation&#x5C5E;&#x6027;"></a>css3&#x7684;animation&#x5C5E;&#x6027;</h3><p>&#x4F7F;&#x7528;animation&#x5C5E;&#x6027;&#x5236;&#x4F5C;&#x52A8;&#x753B;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7684;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x5E27;&#xFF0C;&#x901A;&#x8FC7;&#x4E0D;&#x540C;keyframe&#xFF08;&#x52A8;&#x753B;&#x5E27;&#xFF09;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x5B9E;&#x73B0;&#x5F88;&#x591A;&#x4F18;&#x96C5;&#x7684;&#x6548;&#x679C;&#xFF0C;keyframe&#x4E2D;&#x7684;&#x767E;&#x5206;&#x6570;&#x662F;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x603B;&#x65F6;&#x95F4;&#x7684;&#x6BD4;&#x4F8B;&#x3002;animation&#x662F;&#x8BBE;&#x7F6E;&#x603B;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF0C;&#x800C;keyframe&#x4E2D;&#x8BBE;&#x7F6E;&#x4E0A;&#x76F8;&#x5E94;&#x7684;&#x52A8;&#x753B;&#x540D;&#x5B57;&#xFF0C;&#x7136;&#x540E;&#x5728;keyframe&#x4E2D;&#x8BBE;&#x7F6E;&#x5177;&#x4F53;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;&#x5F53;&#x7136;&#x7531;&#x4E8E;&#x662F;css3&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5B83;&#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF0C;&#x52A0;&#x4E0A;&#x5FC5;&#x987B;&#x7684;&#x524D;&#x7F00;&#x3002;<br>&#x8BED;&#x6CD5;&#xFF1A;<code>animation: name duration timing-function delay iteration-count direction;</code><br><code>name</code>:keyframe&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x4E86;&#x5173;&#x952E;&#x5E27;&#x7684;&#x52A8;&#x753B;&#x7684;&#x540D;&#x79F0;,&#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x7528;&#x6765;&#x533A;&#x522B;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x753B;&#x3002;<br><code>duration</code>:&#x5B8C;&#x6210;&#x52A8;&#x753B;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#xFF08;2s &#x6216;&#x8005; 2000ms&#xFF09;<br><code>timing-function</code>:&#x5B8C;&#x6210;&#x52A8;&#x753B;&#x7684;&#x901F;&#x5EA6;&#x66F2;&#x7EBF;<br><code>delay</code>&#xFF1A;&#x52A8;&#x753B;&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x7684;&#x5EF6;&#x8FDF;<br><code>iteration-count</code>&#xFF1A;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x6B21;&#x6570;<br><code>direction</code>&#xFF1A;&#x662F;&#x5426;&#x8F6E;&#x6D41;&#x53CD;&#x5411;&#x64AD;&#x653E;&#x52A8;&#x753B;&#xFF08;normal:&#x6B63;&#x5E38;&#x987A;&#x5E8F;&#x64AD;&#x653E;&#xFF0C;alternate&#x4E0B;&#x4E00;&#x6B21;&#x53CD;&#x5411;&#x64AD;&#x653E;&#xFF09;&#x5982;&#x679C;&#x628A;&#x52A8;&#x753B;&#x8BBE;&#x7F6E;&#x4E3A;&#x53EA;&#x64AD;&#x653E;&#x4E00;&#x6B21;&#xFF0C;&#x5219;&#x8BE5;&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x3002;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line"><span class="selector-tag">div</span></span><br><span class="line">  {</span><br><span class="line">    <span class="attribute">animation</span>:mymove <span class="number">5s</span> infinite;</span><br><span class="line">    <span class="attribute">-webkit-animation</span>:mymove <span class="number">5s</span> infinite; <span class="comment">/*Safari and Chrome*/</span></span><br><span class="line">  }     </span><br><span class="line">@<span class="keyword">keyframes</span> mymove</span><br><span class="line">{</span><br><span class="line">  1% {<span class="attribute">left</span>:<span class="number">0px</span>;}</span><br><span class="line">  20%{<span class="attribute">left</span>:<span class="number">200px</span>;}</span><br><span class="line">  50% {<span class="attribute">left</span>:<span class="number">300px</span>;}</span><br><span class="line">  100%{<span class="attribute">left</span>:<span class="number">200px</span>;}</span><br><span class="line">}</span><br><span class="line">@<span class="keyword">-webkit-keyframes</span> mymove /*Safari and Chrome*/</span><br><span class="line">{</span><br><span class="line">  1% {<span class="attribute">left</span>:<span class="number">0px</span>;}</span><br><span class="line">  20%{<span class="attribute">left</span>:<span class="number">200px</span>;}</span><br><span class="line">  50% {<span class="attribute">left</span>:<span class="number">300px</span>;}</span><br><span class="line">  100%{<span class="attribute">left</span>:<span class="number">200px</span>;}</span><br><span class="line">}</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="jquery&#x7684;animate&#x51FD;&#x6570;"><a href="#Jquery&#x7684;animate&#x51FD;&#x6570;" class="headerlink" title="Jquery&#x7684;animate&#x51FD;&#x6570;"></a>Jquery&#x7684;animate&#x51FD;&#x6570;</h3><p>&#x8BE5;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;CSS&#x6837;&#x5F0F;&#x5C06;&#x5143;&#x7D20;&#x4ECE;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x3002;CSS&#x5C5E;&#x6027;&#x503C;&#x662F;&#x9010;&#x6E10;&#x6539;&#x53D8;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;&#x53EA;&#x6709;&#x6570;&#x5B57;&#x503C;&#x53EF;&#x521B;&#x5EFA;&#x52A8;&#x753B;&#xFF08;&#x6BD4;&#x5982; &#x201C;margin:30px&#x201D;&#xFF09;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x52A8;&#x753B;&#xFF08;&#x6BD4;&#x5982; &#x201C;background-color:red&#x201D;&#xFF09;&#x3002;&#x53EF;&#x89C1;&#x901A;&#x8FC7;jquery&#x7684;animation&#x751F;&#x6210;&#x52A8;&#x753B;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x76F8;&#x5BF9;&#x503C;&#xFF08;&#x8BE5;&#x503C;&#x76F8;&#x5BF9;&#x4E8E;&#x5143;&#x7D20;&#x7684;&#x5F53;&#x524D;&#x503C;&#xFF09;&#x3002;&#x9700;&#x8981;&#x5728;&#x503C;&#x7684;&#x524D;&#x9762;&#x52A0;&#x4E0A; += &#x6216; -=&#xFF0C;&#x5982;&#xFF08;height:&#x2019;+=150px&#x2019;&#xFF09;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x673A;&#x5236;&#x8FDB;&#x884C;&#x6B65;&#x9AA4;&#x5F0F;&#x7684;&#x52A8;&#x753B;,&#x52A8;&#x753B;&#x5C31;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x7528;&#x8003;&#x8651;&#x517C;&#x5BB9;&#x6027;&#xFF0C;&#x56E0;&#x4E3A;&#x51E0;&#x4E4E;&#x90FD;&#x517C;&#x5BB9;&#x3002;&#x4F46;&#x662F;&#xFF0C;animate&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x6570;&#x503C;&#x5C5E;&#x6027;&#xFF0C;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x7684;&#x53D8;&#x5316;&#x975E;&#x5E38;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x800C;&#x4E14;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x65F6;&#x8FD8;&#x8981;&#x914D;&#x5408;stop&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x8FBE;&#x5230;&#x67D0;&#x6761;&#x4EF6;&#x65F6;&#x7EC8;&#x6B62;&#x52A8;&#x753B;&#xFF0C;&#x8BBE;&#x7F6E;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x3002;<br>&#x8BED;&#x6CD5;&#xFF1A;$(selector).animate(styles,options)<br><code>styles</code>:&#x4EA7;&#x751F;&#x52A8;&#x753B;&#x7684;css&#x6837;&#x5F0F;&#x548C;&#x503C;&#xFF1B;<br><code>options</code>={ speed:&#x52A8;&#x753B;&#x7684;&#x901F;&#x5EA6;&#xFF08;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF1A;slow,normal,fase&#xFF09; easing&#xFF1A;&#x52A8;&#x753B;&#x7684;&#x901F;&#x5EA6;&#x51FD;&#x6570;&#xFF08;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF1A;swing&#xFF0C;linear&#xFF09; callback&#xFF1A;&#x52A8;&#x753B;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x8981;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF1B; queue&#xFF1A;&#x662F;&#x5426;&#x653E;&#x7F6E;&#x5728;&#x6548;&#x679C;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x662F;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x4E3A;false&#x5219;&#x7ACB;&#x5373;&#x5F00;&#x59CB; specialEasing:styles&#x53C2;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x6620;&#x5C04;&#x53CA;&#x5BF9;&#x5E94;&#x7684;easing&#x51FD;&#x6570;&#x3002;}<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div.animate({height:<span class="string">&apos;300px&apos;</span>,opacity:<span class="string">&apos;0.4&apos;</span>},<span class="string">&quot;slow&quot;</span>);</span><br><span class="line">div.animate({width:<span class="string">&apos;300px&apos;</span>,opacity:<span class="string">&apos;0.8&apos;</span>},<span class="string">&quot;slow&quot;</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="&#x539F;&#x751F;js&#x52A8;&#x753B;"><a href="#&#x539F;&#x751F;js&#x52A8;&#x753B;" class="headerlink" title="&#x539F;&#x751F;js&#x52A8;&#x753B;"></a>&#x539F;&#x751F;js&#x52A8;&#x753B;</h3><p>&#x539F;&#x751F;js&#x52A8;&#x753B;&#x5229;&#x7528;js&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x52A8;&#x753B;&#x4E00;&#x6B65;&#x4EE5;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5199;&#x51FA;&#x6765;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x79CD;&#x52A8;&#x753B;&#x6837;&#x5F0F;&#xFF0C;&#x800C;&#x4E14;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x505A;&#x517C;&#x5BB9;&#x6027;&#x5904;&#x7406;&#xFF0C;&#x81EA;&#x5DF1;&#x8BBE;&#x7ACB;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x5B8C;&#x6210;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x4EE3;&#x7801;&#x91CF;&#x5F88;&#x5927;&#x3002;<code>setTimeOut\setTimeInterval</code>&#x3002; </p>
+<h3 id="&#x63D2;&#x4EF6;"><a href="#&#x63D2;&#x4EF6;" class="headerlink" title="&#x63D2;&#x4EF6;"></a>&#x63D2;&#x4EF6;</h3><p>&#x7F51;&#x4E0A;&#x53EF;&#x4EE5;&#x641C;&#x5230;&#x5F88;&#x591A;&#x5C01;&#x88C5;&#x597D;&#x7684;&#x52A8;&#x753B;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F15;&#x5165;&#x5230;&#x9875;&#x9762;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x521D;&#x59CB;&#x5316;&#x548C;&#x914D;&#x7F6E;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8BBE;&#x5B9A;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5C55;&#x793A;&#x52A8;&#x753B;&#x3002;&#x5982;&#xFF1A;waves&#xFF0C;textillate.js&#x7B49;&#x7B49;&#x3002; </p>
+<h3 id="&#x4F7F;&#x7528;canvas&#x5236;&#x4F5C;&#x52A8;&#x753B;"><a href="#&#x4F7F;&#x7528;canvas&#x5236;&#x4F5C;&#x52A8;&#x753B;" class="headerlink" title="&#x4F7F;&#x7528;canvas&#x5236;&#x4F5C;&#x52A8;&#x753B;"></a>&#x4F7F;&#x7528;canvas&#x5236;&#x4F5C;&#x52A8;&#x753B;</h3><p>&#x4F7F;&#x7528;canvas&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x753B;&#x56FE;&#xFF0C;&#x5E76;&#x4E14;&#x5229;&#x7528;&#x5176;api&#xFF0C;&#x5236;&#x4F5C;&#x52A8;&#x753B;&#x3002;canvas&#x4F7F;&#x7528;&#x7684;&#x5730;&#x65B9;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x5236;&#x4F5C;h5&#x5C0F;&#x6E38;&#x620F;&#x4E0A;&#x3002;&#x540C;&#x6837;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x7F16;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x7531;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#x5B8C;&#x6210;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF0C;canvas&#x8981;&#x6BD4;&#x539F;&#x751F;js&#x6548;&#x7387;&#x9AD8;&#x7684;&#x591A;&#xFF0C;&#x6D41;&#x7545;&#x7684;&#x591A;&#x3002;&#x901A;&#x8FC7;&#x753B;&#x7B14;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x80FD;&#x591F;&#x8F7B;&#x677E;&#x7684;&#x5B9E;&#x73B0;&#x66F4;&#x591A;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;</p>
+<h3 id="&#x5F15;&#x7528;gif&#x56FE;&#x7247;"><a href="#&#x5F15;&#x7528;gif&#x56FE;&#x7247;" class="headerlink" title="&#x5F15;&#x7528;gif&#x56FE;&#x7247;"></a>&#x5F15;&#x7528;gif&#x56FE;&#x7247;</h3><p>&#x5982;&#x679C;&#x5728;&#x9700;&#x6C42;&#x7279;&#x522B;&#x7D27;&#x6025;&#xFF0C;&#x800C;&#x4E14;&#x52A8;&#x753B;&#x53C8;&#x7279;&#x522B;&#x590D;&#x6742;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x81EA;&#x5DF1;&#x6CA1;&#x6709;&#x628A;&#x63E1;&#x6309;&#x65F6;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#xFF0C;&#x6216;&#x8005;&#x4EE3;&#x4EF7;&#x592A;&#x5927;&#xFF0C;&#x4E0A;gif&#x56FE;&#x7247;&#x5427;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x4F53;&#x9A8C;&#x662F;&#x6CA1;&#x6709;&#x5F71;&#x54CD;&#x7684;~&#x6240;&#x4EE5;&#xFF0C;&#x522B;&#x7EA0;&#x7ED3;&#x3002;</p>
+<p>&#x53C2;&#x8003;:</p>
+<ul>
+<li><a href="http://www.cnblogs.com/zhangwenjiajessy/p/6154703.html" target="_blank" rel="external">&#x524D;&#x7AEF;&#x5236;&#x4F5C;&#x52A8;&#x753B;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#xFF08;css3&#xFF0C;js&#xFF09;</a></li>
+<li><a href="http://www.cnblogs.com/zhangwenjiajessy/p/6108090.html" target="_blank" rel="external">html5 canvas&#x5E38;&#x7528;api&#x603B;&#x7ED3;(&#x4E00;)(&#x4E8C;)</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/02/深入浅出this、apply、call、bind/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          深入浅出this、apply、call、bind
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/02/前端模块化/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">前端模块化</div>
+        <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="前端实现动画效果" data-title="前端实现动画效果" data-url="http://yoursite.com/2017/02/02/前端实现动画效果/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"aqua0706"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 草 + 酱
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, modified by <a href="http://natumsol.github.com">Yoghurt</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/js/main.js"></script>
+
+  </div>
+</body>
+</html>
