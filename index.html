@@ -58,7 +58,7 @@
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+								<a class="github" target="_blank" href="https://github.com/Ariel-Cheng" title="github">github</a>
 					        
 								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
 					        
@@ -104,7 +104,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/Aqua0706" title="github">github</a>
+						<a class="github" target="_blank" href="https://github.com/Ariel-Cheng" title="github">github</a>
 			        
 						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
 			        
@@ -119,7 +119,7 @@
   
     <div class="article-meta">
       <a href="/2017/02/14/一个基于Node的视频网站的建立/" class="article-date">
-  	<time datetime="2017-02-14T02:32:08.000Z" itemprop="datePublished">02-14</time>
+  	<time datetime="2017-02-14T02:32:08.000Z" itemprop="datePublished">Feb 14</time>
 </a>
       
       
@@ -145,23 +145,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="MVC开发模式"><a href="#MVC开发模式" class="headerlink" title="MVC开发模式"></a>MVC开发模式</h2><p>在开发交互应用中，将不同功能的代码拆分到不同的文件或者区块中，降低代码的耦合度，提高代码的可读性和健壮性。(将Model、View、Controller三部分代码拆分到不同的文件)</p>
-<ol>
-<li><p>服务器端开发</p>
-<ul>
-<li>Model：指和处理业务数据相关的代码。(实现数据库的增删改查)</li>
-<li>View：指和页面组装相关的代码，主要和各种模板引擎相关的代码。(ejs)</li>
-<li>Controller：指和用户行为相关的代码 在网站后平台应用中指对各种http请求的Handler，也就是根据不同的URL和http请求参数，将数据和模板绑定在一起，最终形成页面，呈现给用户。并于router(定义网站的URL规则)紧密相关。</li>
-</ul>
-</li>
-<li>前端开发<ul>
-<li>Model：相当于后台数据的镜像池，与服务器端Model概念相同。</li>
-<li>View：对页面的实现，Html、CSS相关代码。</li>
-<li>Controller：前台用户和网页的交互主要是通过操作事件(点击/input等)实现，所以前端的controller可以理解为各种交互事件的handler。</li>
-</ul>
-</li>
-<li>根据页面中的字段，提取和抽象，来设计数据库。(<code>Mongoose</code>)<ul>
-<li>Schema(模型)：描述文档结构、数据类型。对数据字段进行定义，定义字段的类型。String、Boolean等。定义模型的实例方法，通过实例来调用(<code>Schema.methods={}</code>);定义模型的静态方法，通过模型来调用(<code>Schema.statics={}</code>);定义中间件，定义在某一个动作之前干什么(<code>Schema.pre(&quot;&quot;,function(next){...;next();})</code>)。
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是一个基于NodeJS + ExpressJS + MongoDB实现的一个视频内容管理系统。包括用户登录、注册、用户管理、电影资源录入、视频播放和评论回复等功能。这里记录一下在开发过程中的一些技术要点。o(<em>////▽////</em>)q<br>
         
           <p class="article-more-link">
             <a href="/2017/02/14/一个基于Node的视频网站的建立/#more">more >></a>
@@ -180,113 +164,16 @@
 
 
   
-    <article id="post-Web-缓存" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/08/Web-缓存/" class="article-date">
-  	<time datetime="2017-02-08T13:36:59.000Z" itemprop="datePublished">02-08</time>
-</a>
-      
-      
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/08/Web-缓存/">Web 缓存</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="什么是Web缓存"><a href="#什么是Web缓存" class="headerlink" title="什么是Web缓存"></a>什么是Web缓存</h3><blockquote>
-<p>Web缓存是指一个Web资源（如html页面，图片，js，数据等）存在于Web服务器和客户端（浏览器）之间的副本。缓存会根据进来的请求保存输出内容的副本；当下一个请求来到的时候，如果是相同的URL，缓存会根据缓存机制决定是直接使用副本响应访问请求，还是向源服务器再次发送请求。比较常见的就是浏览器会缓存访问过网站的网页，当再次访问这个URL地址的时候，如果网页没有更新，就不会再次下载网页，而是直接使用本地缓存的网页。只有当网站明确标识资源已经更新，浏览器才会再次下载网页。至于浏览器和网站服务器是如何标识网站页面是否更新的机制，将在后面介绍。</p>
-</blockquote>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/08/Web-缓存/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-CSS-清除浮动" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/06/CSS-清除浮动/" class="article-date">
-  	<time datetime="2017-02-06T13:52:01.000Z" itemprop="datePublished">02-06</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/06/CSS-清除浮动/">CSS 清除浮动</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="浮动的原理"><a href="#浮动的原理" class="headerlink" title="浮动的原理"></a>浮动的原理</h3><p><code>float</code>属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，不过在 CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。<code>float:right|left|none|inherit</code></p>
-<p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含它的框或另一个浮动块的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。浮动框旁边的行框被缩短，从而给浮动框留出空间，行框围绕浮动框。因此，创建浮动框可以使文本围绕图像。当一个元素浮动之后，不会影响到块级框的布局而只会影响内联框（通常是文本）的排列。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/06/CSS-清除浮动/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
     <article id="post-常见数据结构与排序算法之JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/03/常见数据结构与排序算法之JavaScript实现/" class="article-date">
-  	<time datetime="2017-02-03T03:10:56.000Z" itemprop="datePublished">02-03</time>
+      <a href="/2017/02/02/常见数据结构与排序算法之JavaScript实现/" class="article-date">
+  	<time datetime="2017-02-02T03:10:56.000Z" itemprop="datePublished">Feb 02</time>
 </a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -298,7 +185,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/03/常见数据结构与排序算法之JavaScript实现/">常见数据结构与排序算法之JavaScript实现</a>
+      <a class="article-title" href="/2017/02/02/常见数据结构与排序算法之JavaScript实现/">常见数据结构与排序算法之JavaScript实现</a>
     </h1>
   
 
@@ -314,208 +201,7 @@
 <li>js中数组中的元素不必是同一种数据类型。用 Array.isArray() 来判断一个对象是否为数组。它可以弥补typeof运算符的不足
         
           <p class="article-more-link">
-            <a href="/2017/02/03/常见数据结构与排序算法之JavaScript实现/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-JS学习笔记之闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/02/JS学习笔记之闭包/" class="article-date">
-  	<time datetime="2017-02-02T11:04:18.000Z" itemprop="datePublished">02-02</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/JS学习笔记之闭包/">JS学习笔记之闭包</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="闭包的概念、作用"><a href="#闭包的概念、作用" class="headerlink" title="闭包的概念、作用"></a>闭包的概念、作用</h3><p>当在函数内部定义了其他函数时，就创建了闭包（closures）。闭包有权访问函数内部的所有变量，原理如下：</p>
-<ul>
-<li>当某个函数被调用时，会创建一个执行环境及相应的作用域链，然后，使用arguments和其他命名参数的值来初始化函数的活动对象。</li>
-<li>在后台执行环境中，闭包的作用域链包含着他自己的作用域、包含函数的作用域和全局作用域。</li>
-<li>通常，函数的作用域及其所有变量都会在函数执行结束后被销毁</li>
-<li>但是，当函数返回一个闭包时，这个函数的作用域将会一直在内存中保存直到闭包不存在为止,即当函数返回闭包后，其执行环境的作用域链会被销毁，但他的活动对象仍会留在内存中，直到匿名函数被销毁后，函数的活动对象才会被销毁。</li>
-<li>闭包只能取得包含函数中任何变量的最后一个值。
-        
-          <p class="article-more-link">
-            <a href="/2017/02/02/JS学习笔记之闭包/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-深入浅出this、apply、call、bind" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/02/深入浅出this、apply、call、bind/" class="article-date">
-  	<time datetime="2017-02-02T08:50:15.000Z" itemprop="datePublished">02-02</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/深入浅出this、apply、call、bind/">深入浅出this、apply、call、bind</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="this的概念"><a href="#this的概念" class="headerlink" title="this的概念"></a>this的概念</h3><p><code>this</code>是Javascript语言的一个关键字。<code>this</code>对象是在运行时基于函数的执行环境绑定的。 它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用.随着函数使用场合的不同，<code>this</code>的值会发生变化。但是有一个 总的原则，那就是<code>this</code>指的是，调用函数的那个对象. 谁调用它，<code>this</code>就指向谁。</p>
-<p>注意 ：当我们使用严格模式（strict mode）的时候，this 在全局函数中和匿名函数中的值是未定义的（undefined），不指向任何一个对象。一个函数执行的时候，它就获得了 this 这个属性。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/02/深入浅出this、apply、call、bind/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-前端实现动画效果" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/02/前端实现动画效果/" class="article-date">
-  	<time datetime="2017-02-02T08:03:22.000Z" itemprop="datePublished">02-02</time>
-</a>
-      
-      
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/前端实现动画效果/">前端实现动画效果</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="css3的transition"><a href="#css3的transition" class="headerlink" title="css3的transition"></a>css3的transition</h3><p>抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 </p>
-<p>语法：<code>transition: property duration timing-function delay;</code> </p>
-<p><code>property</code>:填写需要变化的css属性如：width,line-height,font-size,color等;<br><code>duration</code>:完成过渡效果需要的时间（2s 或者2000ms）<br><code>timing-function</code>:完成效果的速度曲线（linear匀速,ease从慢到快再到慢,ease-in慢慢变快,ease-out慢慢变慢等等）<br><code>timing-delay</code>:动画效果的延迟触发时间（2s 或者2000ms）。<br><em>tips: transform是一种变化属性，该属性允许我们对元素进行旋转、缩放、移动或倾斜。可以作为transition中需要变化的属性。</em><br>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/02/前端实现动画效果/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-前端模块化" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/02/02/前端模块化/" class="article-date">
-  	<time datetime="2017-02-02T06:35:37.000Z" itemprop="datePublished">02-02</time>
-</a>
-      
-      
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/前端模块化/">前端模块化</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前端模块化"><a href="#前端模块化" class="headerlink" title="前端模块化"></a>前端模块化</h3><p>前端模块化，使得开发体验大大增强，摆脱了很多需要人力去做切容易出错的点，使得代码管理更加清晰规范。文件按需加载，依赖自动管理，使得更多的精力去关注模块代码本身，开发时不需要在页面上写一大堆 <code>&lt;script&gt;</code>标签，不需要每增加一个文件，还要到HTML或者其他地方添加一个<code>&lt;script&gt;</code>标签或文件声明。减少命名冲突，消除全局变量；一个模块一个文件，组织更清晰；依赖自动加载，按需加载。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/02/前端模块化/#more">more >></a>
+            <a href="/2017/02/02/常见数据结构与排序算法之JavaScript实现/#more">more >></a>
           </p>
         
       
@@ -534,11 +220,13 @@
     <article id="post-CORS" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/02/CORS/" class="article-date">
-  	<time datetime="2017-02-02T03:16:25.000Z" itemprop="datePublished">02-02</time>
+      <a href="/2017/01/22/CORS/" class="article-date">
+  	<time datetime="2017-01-22T03:16:25.000Z" itemprop="datePublished">Jan 22</time>
 </a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域资源共享/">跨域资源共享</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -550,7 +238,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/02/CORS/">CORS</a>
+      <a class="article-title" href="/2017/01/22/CORS/">CORS</a>
     </h1>
   
 
@@ -563,7 +251,7 @@
 <p>浏览器的同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但头疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。<br>
         
           <p class="article-more-link">
-            <a href="/2017/02/02/CORS/#more">more >></a>
+            <a href="/2017/01/22/CORS/#more">more >></a>
           </p>
         
       
@@ -583,10 +271,12 @@
   
     <div class="article-meta">
       <a href="/2017/01/09/Client-Storage/" class="article-date">
-  	<time datetime="2017-01-09T13:28:20.000Z" itemprop="datePublished">01-09</time>
+  	<time datetime="2017-01-09T13:28:20.000Z" itemprop="datePublished">Jan 09</time>
 </a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/客户端存储/">客户端存储</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -608,7 +298,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="客户端存储方式的异同"><a href="#客户端存储方式的异同" class="headerlink" title="客户端存储方式的异同"></a>客户端存储方式的异同</h3><p>客户端存储方式有：cookie、sessionStorage、localStorage、Web Storag等。</p>
-<p><strong>共同点：</strong> 都是保存在浏览器端，且有同源限制。<br>
+<p><strong>共同点：</strong> 都是保存在浏览器端，且有同源限制。</p>
+<p><strong>区别：</strong></p>
+<ol>
+<li>cookie数据在浏览器和服务器间来回传递,和服务器端进行交互的，一般用于标识用户身份。而sessionStorage和localStorage用于浏览器缓存数据，不会自动把数据发给服务器，在本地保存。</li>
+<li>由于Cookie是作为HTTP规范的一部分存在的，每次携带都会在HTTP头中，如果Cookie保存过多数据会带来性能问题，而WebStorage仅在客户端保存，不参与服务器的通信。一般浏览器不会修改cookie,但是会频繁操作cookie.</li>
+<li>cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</li>
+<li>存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。</li>
+<li>数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，刷新页面后数据依旧存在，但关闭页面或关闭浏览器后就清除了,自然也就不可能持久保持；localStorage则是持久化的本地存储，除非被清除掉否则永久保存，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</li>
+<li>作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。</li>
+<li>Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。(注：Web Storage实际上由两部分组成：sessionStorage与localStorage。)
         
           <p class="article-more-link">
             <a href="/2017/01/09/Client-Storage/#more">more >></a>
@@ -627,9 +326,60 @@
 
 
   
+    <article id="post-前端实现动画效果" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/22/前端实现动画效果/" class="article-date">
+  	<time datetime="2016-12-22T08:03:22.000Z" itemprop="datePublished">Dec 22</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS-动画/">CSS 动画</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/22/前端实现动画效果/">前端实现动画效果</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="css3的transition"><a href="#css3的transition" class="headerlink" title="css3的transition"></a>css3的transition</h3><p>抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 </p>
+<p>语法：<code>transition: property duration timing-function delay;</code> </p>
+<p><code>property</code>:填写需要变化的css属性如：width,line-height,font-size,color等;<br><code>duration</code>:完成过渡效果需要的时间（2s 或者2000ms）<br><code>timing-function</code>:完成效果的速度曲线（linear匀速,ease从慢到快再到慢,ease-in慢慢变快,ease-out慢慢变慢等等）<br><code>timing-delay</code>:动画效果的延迟触发时间（2s 或者2000ms）。<br><em>tips: transform是一种变化属性，该属性允许我们对元素进行旋转、缩放、移动或倾斜。可以作为transition中需要变化的属性。</em><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/12/22/前端实现动画效果/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 

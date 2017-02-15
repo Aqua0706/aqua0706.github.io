@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>草 + 酱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="草 + 酱">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="草 + 酱">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="草 + 酱">
+<meta name="twitter:description">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="/avatar.jpg">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/projects">项目</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Ariel-Cheng" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+			</div>
+		</div>
+	</header>		
+</span>		
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/avatar.jpg">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">草 + 酱</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">如果说真实是残酷的，谎言绝对是温柔的吧。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/projects">项目</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Ariel-Cheng" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3267066875/" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      
+  
+    <article id="post-You-Don-t-Know-JS-Async-Performance1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/" class="article-date">
+  	<time datetime="2016-05-17T07:51:04.000Z" itemprop="datePublished">May 17</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书-JS/">读书 JS</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/">You Don&#39;t Know JS读书笔记之Async</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Chapter-1-Asynchrony-Now-amp-Later"><a href="#Chapter-1-Asynchrony-Now-amp-Later" class="headerlink" title="Chapter 1:Asynchrony: Now &amp; Later"></a>Chapter 1:Asynchrony: Now &amp; Later</h2><h3 id="什么是异步？"><a href="#什么是异步？" class="headerlink" title="什么是异步？"></a>什么是异步？</h3><hr>
+<blockquote>
+<p> Any time you wrap a portion of code into a function and specify that it should be executed in response to some event<br>  (timer, mouse click, Ajax response, etc.), you are creating a later chunk of your code, and thus introducing asynchrony to<br>  your program.</p>
+</blockquote>
+<p>  将程序分块chunk,只有一个chunk现在执行，其他的chunk稍后执行（chunk通常由function组成）。若使用定时器、ajax请求（默认异步）、鼠标单击监听事件、等待用户输入等，从而指定一部分的代码稍后执行，也就是在程序中引入了异步。</p>
+<ul>
+<li>例如我们发送网络请求等待响应，它也可以发送一个同步的ajax请求（最好不要），这时就必须要等到响应回来之后，才可以继续执行剩下的代码。而异步的ajax，他发送请求之后，并不会等待请求回来，而只是注册一下这个事件，就继续执行剩下的代码，将这个事件挂起，通知hosting environment去监听，等待网络请求回来之后，触发这个事件，再把回掉函数放到事件循环队列中。
+        
+          <p class="article-more-link">
+            <a href="/2016/05/17/You-Don-t-Know-JS-Async-Performance1/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-single-div" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/08/single-div/" class="article-date">
+  	<time datetime="2016-04-08T06:41:18.000Z" itemprop="datePublished">Apr 08</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目/">项目</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/08/single-div/">用一个div+css实现复杂图形</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>清明回来，学长让我看了个网站<a href="http://a.singlediv.com/">Single Div</a>，里面的图片都是只用了一个div实现的，484好神奇~而且基本都是使用<code>background-image</code>和<code>box-shadow</code>这两个属性来实现。在看了一堆资料和动手实现了其中两个之后，来总结一下~</p>
+<h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><p><code>background-image</code>属性为元素设置背景图像。<br>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。可以根据<code>background-repeat</code>属性来指定图像无限平铺、沿着某个轴（x 轴或 y 轴）平铺，或者根本不平铺，也可以根据<code>background-position</code>属性指定初始背景图像（原图像）放置的位置。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/04/08/single-div/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-frontify" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/29/frontify/" class="article-date">
+  	<time datetime="2016-03-29T12:08:34.000Z" itemprop="datePublished">Mar 29</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目/">项目</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/29/frontify/">frontify页面的实现</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是我动手实现的第一个页面<a href="http://www.frontify.com">Frontify</a>，前后花了一个星期的时间，目前还没有考虑响应式页面。以下是我实现过程中遇到的一些问题，及我的一些思考总结。</p>
+<h2 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS <code>position</code> 属性</h2><ol>
+<li><p>static定位</p>
+<p> 默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+</li>
+<li><p>fixed定位</p>
+<p> 生成绝对定位的元素，相对于<strong>浏览器窗口</strong>进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br> 整个页面的<code>header</code>就是fixed定位的.</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/29/frontify/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="post-CSS-定位" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/20/CSS-定位/" class="article-date">
+  	<time datetime="2016-03-20T13:38:46.000Z" itemprop="datePublished">Mar 20</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS-定位/">CSS 定位</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/20/CSS-定位/">CSS 定位</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将窗体自上而下分成一行行，并在每一行中从左到右的顺序排放元素，即为文档流。有三种情况将使得元素脱离文档流，分别是浮动(float left or right)、绝对定位(position:absolute)、固定定位(position:fixed)。CSS定位，就是元素的position不为static。而该元素将成为其亲子元素的offsetParent，也有机会成为其孙元素的offsetParent。<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/20/CSS-定位/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+    <article id="&#39;new-blog1" class="article article-type-&#39;new" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/06/blog1/" class="article-date">
+  	<time datetime="2016-02-06T09:07:04.000Z" itemprop="datePublished">Feb 06</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/06/blog1/"> 유재석</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h2><p>boom 哈哈哈</p>
+<p><img src="/images/1.jpg" alt="刘在石" ></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"Hello World!!"</span>);</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2016/02/06/blog1/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
+  
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 草 + 酱
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten, modified by <a href="http://natumsol.github.com">Yoghurt</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="/js/main.js"></script>
+
+  </div>
+</body>
+</html>
