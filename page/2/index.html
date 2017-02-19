@@ -115,6 +115,57 @@
 </nav>
       
   
+    <article id="post-前端实现动画效果" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/22/前端实现动画效果/" class="article-date">
+  	<time datetime="2016-12-22T08:03:22.000Z" itemprop="datePublished">Dec 22</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS-动画/">CSS 动画</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/22/前端实现动画效果/">前端实现动画效果</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="css3的transition"><a href="#css3的transition" class="headerlink" title="css3的transition"></a>css3的transition</h3><p>抓住了所设置变化属性的起始态和完成态，通过设定的速度曲线来完成动画。可以涉及到各种变化的css属性，默认为all，则所有变化的属性都会在出发时，以动画的形式展现出来。这种动画方式是css3的，因此ie9以下是不支持的，其他的浏览器需要加前缀，并且只有两态，不支持自定义中间的状态。 </p>
+<p>语法：<code>transition: property duration timing-function delay;</code> </p>
+<p><code>property</code>:填写需要变化的css属性如：width,line-height,font-size,color等;<br><code>duration</code>:完成过渡效果需要的时间（2s 或者2000ms）<br><code>timing-function</code>:完成效果的速度曲线（linear匀速,ease从慢到快再到慢,ease-in慢慢变快,ease-out慢慢变慢等等）<br><code>timing-delay</code>:动画效果的延迟触发时间（2s 或者2000ms）。<br><em>tips: transform是一种变化属性，该属性允许我们对元素进行旋转、缩放、移动或倾斜。可以作为transition中需要变化的属性。</em><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/12/22/前端实现动画效果/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-前端模块化" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -318,70 +369,9 @@
 
 
   
-    <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/26/regular-expression/" class="article-date">
-  	<time datetime="2016-10-26T08:28:56.000Z" itemprop="datePublished">Oct 26</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/26/regular-expression/">regular expression 正则表达式</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>总是遇见正则表达式，也没有仔细看过，今天看了几篇blog，简单做个笔记。<br>正则表达式：用于匹配满足某些规则的文本的代码。</p>
-<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><strong>常用元字符</strong></p>
-<ul>
-<li>&nbsp;<strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配除换行符以外的任意字符。</li>
-<li>&nbsp;<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指定`</em>`前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</li>
-<li>\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配字母或者数字或者下划线或汉字。</li>
-<li>\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配任意的空白符，包括空格，制表符(Tab),换行符，中文全角空格。</li>
-<li>\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配一位数字0-9。</li>
-<li>\b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配单词的开头或者结尾，即单词的分界处，并不是匹配具体的一个什么分割字符，就是匹配这么个位置。</li>
-<li>&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的开始。</li>
-<li>&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的结束。</li>
-</ul>
-<p><em>如果你想查找元字符本身的话，需要使用转义字符\来取消这些字符的特殊意义。<code>\.</code>匹配<code>.</code>，<code>\\</code>匹配<code>\</code>。</em><br>
-        
-          <p class="article-more-link">
-            <a href="/2016/10/26/regular-expression/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 

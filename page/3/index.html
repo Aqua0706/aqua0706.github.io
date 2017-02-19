@@ -115,6 +115,67 @@
 </nav>
       
   
+    <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/26/regular-expression/" class="article-date">
+  	<time datetime="2016-10-26T08:28:56.000Z" itemprop="datePublished">Oct 26</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/regular-expression/">regular expression 正则表达式</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>总是遇见正则表达式，也没有仔细看过，今天看了几篇blog，简单做个笔记。<br>正则表达式：用于匹配满足某些规则的文本的代码。</p>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><strong>常用元字符</strong></p>
+<ul>
+<li>&nbsp;<strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配除换行符以外的任意字符。</li>
+<li>&nbsp;<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指定`</em>`前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</li>
+<li>\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配字母或者数字或者下划线或汉字。</li>
+<li>\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配任意的空白符，包括空格，制表符(Tab),换行符，中文全角空格。</li>
+<li>\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配一位数字0-9。</li>
+<li>\b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配单词的开头或者结尾，即单词的分界处，并不是匹配具体的一个什么分割字符，就是匹配这么个位置。</li>
+<li>&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的开始。</li>
+<li>&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;匹配字符串的结束。</li>
+</ul>
+<p><em>如果你想查找元字符本身的话，需要使用转义字符\来取消这些字符的特殊意义。<code>\.</code>匹配<code>.</code>，<code>\\</code>匹配<code>\</code>。</em><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/10/26/regular-expression/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-Hacking-With-React-读书笔记之React入门" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -319,58 +380,9 @@
 
 
   
-    <article id="post-You-Don-t-Know-JS-Async-Performance2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/" class="article-date">
-  	<time datetime="2016-06-06T13:04:51.000Z" itemprop="datePublished">Jun 06</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书-JS/">读书 JS</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/">You Don&#39;t Know JS读书笔记之Promise</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>回调函数的问题在于他剥夺了我们使用return和throw，这类关键字的能力，把程序执行的控制权交给回调函数，从而带来反转控制（inversion of control）。而Promise很好的解决了这一问题。如下面这个例子，并不是直接给foo()传递一个回调函数，而是return一个接收回调函数的事件-promise。<br>promise承诺我们一定可以在未来的某个时刻得到某个异步事件的结果，fulfillment或者reject，所以我们可以对结果安排一些之后要执行的操作，而不必担心这个异步事件什么时候执行完毕（time-independent）。这里p获得了这个promise执行的结果，我们可以通过then方法来决定reslove之后执行什么，来处理这些future value。<br>inversion of inversion从而解决反转控制。<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/06/06/You-Don-t-Know-JS-Async-Performance2/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
