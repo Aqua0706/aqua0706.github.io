@@ -115,6 +115,60 @@
 </nav>
       
   
+    <article id="post-node-primer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/27/node-primer/" class="article-date">
+  	<time datetime="2016-10-27T07:49:46.000Z" itemprop="datePublished">Oct 27</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书-Node/">读书 Node</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/node-primer/">node primer</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>什么是NodeJS？<br>JS本身是一种完整的语言，可以在不同的上下文中执行，浏览器提供了一个上下文，nodejs事实上也是，它使用Google的V8虚拟机，来解释和执行js，使得js可以脱离浏览器环境在后端运行js代码。<ul>
+<li>NodeJS是一个JS脚本解析器，任何操作系统下安装NodeJS本质上做的事情都是把NodeJS执行程序复制到一个目录，然后保证在这个目录在系统PATH环境变量下，以便终端下可以使用node命令。</li>
+<li>终端下直接输入node命令可以进入命令交互模式，很适合用来测试一些JS代码片段，比如正则表达式。</li>
+<li>NodeJS使用CMD模范。主模块作为程序入口点，所有模块在执行过程中只初始化一次，无论require几次。</li>
+<li>相较浏览器js解析引擎来说，NodeJS可以解析JS代码，没有浏览器安全级的限制，还提供系统级别的API：如文件的读写、进程的管理、网络通信。
+        
+          <p class="article-more-link">
+            <a href="/2016/10/27/node-primer/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -315,56 +369,6 @@
         
           <p class="article-more-link">
             <a href="/2016/07/13/JS学习笔记之闭包/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-CSS-清除浮动" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/06/CSS-清除浮动/" class="article-date">
-  	<time datetime="2016-07-06T13:52:01.000Z" itemprop="datePublished">Jul 06</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS-清除浮动/">CSS 清除浮动</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/06/CSS-清除浮动/">CSS 清除浮动</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="浮动的原理"><a href="#浮动的原理" class="headerlink" title="浮动的原理"></a>浮动的原理</h3><p><code>float</code>属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，不过在 CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。<code>float:right|left|none|inherit</code></p>
-<p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含它的框或另一个浮动块的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。浮动框旁边的行框被缩短，从而给浮动框留出空间，行框围绕浮动框。因此，创建浮动框可以使文本围绕图像。当一个元素浮动之后，不会影响到块级框的布局而只会影响内联框（通常是文本）的排列。<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/07/06/CSS-清除浮动/#more">more >></a>
           </p>
         
       
