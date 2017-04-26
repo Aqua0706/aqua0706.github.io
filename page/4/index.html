@@ -115,6 +115,61 @@
 </nav>
       
   
+    <article id="post-JS学习笔记之闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/13/JS学习笔记之闭包/" class="article-date">
+  	<time datetime="2016-07-13T11:04:18.000Z" itemprop="datePublished">Jul 13</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-闭包/">JS 闭包</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/13/JS学习笔记之闭包/">JS学习笔记之闭包</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="闭包的概念、作用"><a href="#闭包的概念、作用" class="headerlink" title="闭包的概念、作用"></a>闭包的概念、作用</h3><p>当在函数内部定义了其他函数时，就创建了闭包（closures）。闭包有权访问函数内部的所有变量，原理如下：</p>
+<ul>
+<li>当某个函数被调用时，会创建一个执行环境及相应的作用域链，然后，使用arguments和其他命名参数的值来初始化函数的活动对象。</li>
+<li>在后台执行环境中，闭包的作用域链包含着他自己的作用域、包含函数的作用域和全局作用域。</li>
+<li>通常，函数的作用域及其所有变量都会在函数执行结束后被销毁</li>
+<li>但是，当函数返回一个闭包时，这个函数的作用域将会一直在内存中保存直到闭包不存在为止,即当函数返回闭包后，其执行环境的作用域链会被销毁，但他的活动对象仍会留在内存中，直到匿名函数被销毁后，函数的活动对象才会被销毁。</li>
+<li>闭包只能取得包含函数中任何变量的最后一个值。
+        
+          <p class="article-more-link">
+            <a href="/2016/07/13/JS学习笔记之闭包/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-CSS-清除浮动" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -333,56 +388,6 @@
 <li><a href="http://www.chinaz.com/design/2015/0909/444092.shtml" target="_blank" rel="external">&#x300A;WEB&#x8BBE;&#x8BA1;&#x300B;&#x7011;&#x5E03;&#x6D41;&#x5E03;&#x5C40;&#x6D45;&#x6790;</a></li>
 </ul>
 
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-single-div" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/08/single-div/" class="article-date">
-  	<time datetime="2016-04-08T06:41:18.000Z" itemprop="datePublished">Apr 08</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目/">项目</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/08/single-div/">用一个div+css实现复杂图形</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>清明回来，学长让我看了个网站<a href="http://a.singlediv.com/">Single Div</a>，里面的图片都是只用了一个div实现的，484好神奇~而且基本都是使用<code>background-image</code>和<code>box-shadow</code>这两个属性来实现。在看了一堆资料和动手实现了其中两个之后，来总结一下~</p>
-<h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><p><code>background-image</code>属性为元素设置背景图像。<br>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。可以根据<code>background-repeat</code>属性来指定图像无限平铺、沿着某个轴（x 轴或 y 轴）平铺，或者根本不平铺，也可以根据<code>background-position</code>属性指定初始背景图像（原图像）放置的位置。</p>
-        
-          <p class="article-more-link">
-            <a href="/2016/04/08/single-div/#more">more >></a>
-          </p>
-        
       
     </div>
     

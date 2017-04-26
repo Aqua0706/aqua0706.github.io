@@ -115,6 +115,56 @@
 </nav>
       
   
+    <article id="post-深入浅出this、apply、call、bind" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/02/深入浅出this、apply、call、bind/" class="article-date">
+  	<time datetime="2016-11-02T08:50:15.000Z" itemprop="datePublished">Nov 02</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/02/深入浅出this、apply、call、bind/">深入浅出this、apply、call、bind</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="this的概念"><a href="#this的概念" class="headerlink" title="this的概念"></a>this的概念</h3><p><code>this</code>是Javascript语言的一个关键字。<code>this</code>对象是在运行时基于函数的执行环境绑定的。 它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用.随着函数使用场合的不同，<code>this</code>的值会发生变化。但是有一个 总的原则，那就是<code>this</code>指的是，调用函数的那个对象. 谁调用它，<code>this</code>就指向谁。</p>
+<p>注意 ：当我们使用严格模式（strict mode）的时候，this 在全局函数中和匿名函数中的值是未定义的（undefined），不指向任何一个对象。一个函数执行的时候，它就获得了 this 这个属性。<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/11/02/深入浅出this、apply、call、bind/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-node-primer" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -203,7 +253,7 @@
 <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><strong>常用元字符</strong></p>
 <ul>
 <li>&nbsp;<strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配除换行符以外的任意字符。</li>
-<li>&nbsp;<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指定`</em>`前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</li>
+<li>&nbsp;<code>*</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指定<code>*</code>前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</li>
 <li>\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配字母或者数字或者下划线或汉字。</li>
 <li>\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配任意的空白符，包括空格，制表符(Tab),换行符，中文全角空格。</li>
 <li>\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匹配一位数字0-9。</li>
@@ -314,61 +364,6 @@
         
           <p class="article-more-link">
             <a href="/2016/08/09/Session-Cookie/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-JS学习笔记之闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/13/JS学习笔记之闭包/" class="article-date">
-  	<time datetime="2016-07-13T11:04:18.000Z" itemprop="datePublished">Jul 13</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-闭包/">JS 闭包</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/13/JS学习笔记之闭包/">JS学习笔记之闭包</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="闭包的概念、作用"><a href="#闭包的概念、作用" class="headerlink" title="闭包的概念、作用"></a>闭包的概念、作用</h3><p>当在函数内部定义了其他函数时，就创建了闭包（closures）。闭包有权访问函数内部的所有变量，原理如下：</p>
-<ul>
-<li>当某个函数被调用时，会创建一个执行环境及相应的作用域链，然后，使用arguments和其他命名参数的值来初始化函数的活动对象。</li>
-<li>在后台执行环境中，闭包的作用域链包含着他自己的作用域、包含函数的作用域和全局作用域。</li>
-<li>通常，函数的作用域及其所有变量都会在函数执行结束后被销毁</li>
-<li>但是，当函数返回一个闭包时，这个函数的作用域将会一直在内存中保存直到闭包不存在为止,即当函数返回闭包后，其执行环境的作用域链会被销毁，但他的活动对象仍会留在内存中，直到匿名函数被销毁后，函数的活动对象才会被销毁。</li>
-<li>闭包只能取得包含函数中任何变量的最后一个值。
-        
-          <p class="article-more-link">
-            <a href="/2016/07/13/JS学习笔记之闭包/#more">more >></a>
           </p>
         
       

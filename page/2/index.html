@@ -115,6 +115,65 @@
 </nav>
       
   
+    <article id="post-Client-Storage" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/09/Client-Storage/" class="article-date">
+  	<time datetime="2017-01-09T13:28:20.000Z" itemprop="datePublished">Jan 09</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/客户端存储/">客户端存储</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/09/Client-Storage/">Client_Storage</a>
+    </h1>
+  
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="客户端存储方式的异同"><a href="#客户端存储方式的异同" class="headerlink" title="客户端存储方式的异同"></a>客户端存储方式的异同</h3><p>客户端存储方式有：cookie、sessionStorage、localStorage、Web Storag等。</p>
+<p><strong>共同点：</strong> 都是保存在浏览器端，且有同源限制。</p>
+<p><strong>区别：</strong></p>
+<ol>
+<li>cookie数据在浏览器和服务器间来回传递,和服务器端进行交互的，一般用于标识用户身份。而sessionStorage和localStorage用于浏览器缓存数据，不会自动把数据发给服务器，在本地保存。</li>
+<li>由于Cookie是作为HTTP规范的一部分存在的，每次携带都会在HTTP头中，如果Cookie保存过多数据会带来性能问题，而WebStorage仅在客户端保存，不参与服务器的通信。一般浏览器不会修改cookie,但是会频繁操作cookie.</li>
+<li>cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</li>
+<li>存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。</li>
+<li>数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，刷新页面后数据依旧存在，但关闭页面或关闭浏览器后就清除了,自然也就不可能持久保持；localStorage则是持久化的本地存储，除非被清除掉否则永久保存，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</li>
+<li>作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。</li>
+<li>Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。(注：Web Storage实际上由两部分组成：sessionStorage与localStorage。)
+        
+          <p class="article-more-link">
+            <a href="/2017/01/09/Client-Storage/#more">more >></a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-前端实现动画效果" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -299,56 +358,6 @@
         
           <p class="article-more-link">
             <a href="/2016/11/20/React-Webpack/#more">more >></a>
-          </p>
-        
-      
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-深入浅出this、apply、call、bind" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/02/深入浅出this、apply、call、bind/" class="article-date">
-  	<time datetime="2016-11-02T08:50:15.000Z" itemprop="datePublished">Nov 02</time>
-</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/02/深入浅出this、apply、call、bind/">深入浅出this、apply、call、bind</a>
-    </h1>
-  
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="this的概念"><a href="#this的概念" class="headerlink" title="this的概念"></a>this的概念</h3><p><code>this</code>是Javascript语言的一个关键字。<code>this</code>对象是在运行时基于函数的执行环境绑定的。 它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用.随着函数使用场合的不同，<code>this</code>的值会发生变化。但是有一个 总的原则，那就是<code>this</code>指的是，调用函数的那个对象. 谁调用它，<code>this</code>就指向谁。</p>
-<p>注意 ：当我们使用严格模式（strict mode）的时候，this 在全局函数中和匿名函数中的值是未定义的（undefined），不指向任何一个对象。一个函数执行的时候，它就获得了 this 这个属性。<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/11/02/深入浅出this、apply、call、bind/#more">more >></a>
           </p>
         
       
